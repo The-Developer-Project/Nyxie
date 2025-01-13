@@ -1,0 +1,7 @@
+The original bot is in the TDP discord server and is created and hosted by GalacticApricot
+
+If you are to use the bot for your own project you must credit The Developer Project.
+
+You can join the discord server here: https://discord.gg/QedwEVhrkX
+
+We are not responsible for any forks and we cannot help you if this repository has been modified.
