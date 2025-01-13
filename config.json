@@ -1,0 +1,12 @@
+{
+	"token": "ENTER_TOKEN_HERE",
+  "clientId": "ENTER_CLIENT_ID_HERE",
+	"guildId": "ENTER_GUILD_ID_HERE",
+	"hiringChannel": "ENTER_HIRING_CHANNEL_ID_HERE",
+	"portfolioChannel": "ENTER_PORTFOLIOS_CHANNEL_ID_HERE",
+	"memberCountChannel": "ENTER_MEMBER_COUNT_CHANNEL_ID_HERE",
+	"generalChannel": "ENTER_GENERAL_CHANNEL_ID_HERE",
+	"qotdChannel": "ENTER_QOTD_CHANNEL_ID_HERE",
+	"qotdPing": "ENTER_QOTD_PING_ROLE_ID_HERE",
+	"commonStaffRoleName": "ENTER_STAFF_ROLE_ID_HERE"
+}
