@@ -22,7 +22,7 @@ If you are to use this bot for your own project, **you must credit The Developer
 Before setting up Nyxie, you’ll need to ensure you have the following:
 
 - **Node.js** installed (preferably the latest LTS version)
-- A **Discord Developer account**
+- A **Discord account**
 - A **code editor** (e.g., Visual Studio Code)
 - **Git** (if you prefer cloning the repository) or the **Download button** for downloading the bot's code directly.
 
@@ -75,7 +75,7 @@ You can either clone the repository using Git or download the project as a ZIP f
 If you're familiar with Git, you can clone the repository directly:
 
 ```bash
-git clone https://github.com/yourusername/Nyxie.git
+git clone https://github.com/The-Developer-Project/Nyxie.git
 cd Nyxie
 ```
 
@@ -83,7 +83,7 @@ cd Nyxie
 
 If you prefer not to use Git, you can download the code directly:
 
-1. Go to the [Nyxie GitHub repository](https://github.com/yourusername/Nyxie).
+1. Go to the [Nyxie GitHub repository](https://github.com/The-Developer-Project/Nyxie).
 2. Click on the **Download ZIP** button on the right side of the page.
 3. Extract the ZIP file to a directory on your computer.
 
@@ -104,6 +104,7 @@ npm init -y
 
 ```bash
 npm install discord.js
+npm install rss-parser
 ```
 
 ---
@@ -117,15 +118,19 @@ Here’s the provided template with explanations of each component:
 ```json
 {
 	"token": "ENTER_TOKEN_HERE",
-	"clientId": "ENTER_CLIENT_ID_HERE",
+  "clientId": "ENTER_CLIENT_ID_HERE",
 	"guildId": "ENTER_GUILD_ID_HERE",
 	"hiringChannel": "ENTER_HIRING_CHANNEL_ID_HERE",
 	"portfolioChannel": "ENTER_PORTFOLIOS_CHANNEL_ID_HERE",
 	"memberCountChannel": "ENTER_MEMBER_COUNT_CHANNEL_ID_HERE",
 	"generalChannel": "ENTER_GENERAL_CHANNEL_ID_HERE",
 	"qotdChannel": "ENTER_QOTD_CHANNEL_ID_HERE",
+	"youTubeNotificationChannel": "ENTER_YOUTUBE_NOTIFICATION_CHANNEL_ID_HERE",
+	"youTubeChannel": "ENTER_YOUTUBE_CHANNEL_ID_HERE (actual yt channel)",
+	"youTubePing": "ENTER_YOUTUBE_PING_ROLE_ID_HERE",
 	"qotdPing": "ENTER_QOTD_PING_ROLE_ID_HERE",
-	"commonStaffRoleName": "ENTER_STAFF_ROLE_ID_HERE"
+	"commonStaffRoleName": "ENTER_STAFF_ROLE_ID_HERE",
+	"banAppealLink": "ENTER_BAN_APPEAL_FORM_LINK_HERE"
 }
 ```
 
@@ -138,7 +143,11 @@ Here’s the provided template with explanations of each component:
 - **generalChannel**: General chat channel ID.
 - **qotdChannel**: Channel for daily QOTD (Question of the Day) posts.
 - **qotdPing**: Role ID for pings related to QOTD.
+- **youTubeNotificationChannel**: Channel ID for YouTube notifications.
+- **youTubeChannel**: The Id of your youube channel (youtube -> settings -> advanced settings -> channel ID).
+- **youTubePing**: The ID of your youtube notification ping role.
 - **commonStaffRoleName**: The name or ID of your staff role.
+- **banAppealLink**: The link to your ban appeal form.
 
 ---
 
@@ -181,6 +190,7 @@ If you need assistance or want to contribute to the project, feel free to contac
 
 ```bash
 discord.js: ^14.0.0
+rss-parser: latest
 ```
 
 ---

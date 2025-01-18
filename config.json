@@ -7,6 +7,10 @@
 	"memberCountChannel": "ENTER_MEMBER_COUNT_CHANNEL_ID_HERE",
 	"generalChannel": "ENTER_GENERAL_CHANNEL_ID_HERE",
 	"qotdChannel": "ENTER_QOTD_CHANNEL_ID_HERE",
+	"youTubeNotificationChannel": "ENTER_YOUTUBE_NOTIFICATION_CHANNEL_ID_HERE",
+	"youTubeChannel": "ENTER_YOUTUBE_CHANNEL_ID_HERE (actual yt channel)",
+	"youTubePing": "ENTER_YOUTUBE_PING_ROLE_ID_HERE",
 	"qotdPing": "ENTER_QOTD_PING_ROLE_ID_HERE",
-	"commonStaffRoleName": "ENTER_STAFF_ROLE_ID_HERE"
+	"commonStaffRoleName": "ENTER_STAFF_ROLE_ID_HERE",
+	"banAppealLink": "ENTER_BAN_APPEAL_FORM_LINK_HERE"
 }

@@ -40,4 +40,11 @@ for (const file of eventFiles) {
 	}
 }
 
+const functionsPath = path.join(__dirname, 'functions');
+const functionFiles = fs.readdirSync(functionsPath).filter(file => file.endsWith('.js'));
+
+for (const file of functionFiles) {
+	const filePath = path.join(functionsPath, file);
+	const func = require(filePath)(client);
+}
 client.login(token);
