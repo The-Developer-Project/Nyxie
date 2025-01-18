@@ -11,7 +11,6 @@ module.exports = (client) => {
         if (!channel) return;
         let {link, author, title, id} = videodata.items[0];
         let vid = id;
-        console.log(id);
         let rawdata = fs.readFileSync('yt.json');
         let lastVideoId= JSON.parse(rawdata).lastVideoId;
         if (lastVideoId == id) return;
