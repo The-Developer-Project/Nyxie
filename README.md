@@ -105,6 +105,7 @@ npm init -y
 ```bash
 npm install discord.js
 npm install rss-parser
+npm install node-fetch
 ```
 
 ---
@@ -191,6 +192,7 @@ If you need assistance or want to contribute to the project, feel free to contac
 ```bash
 discord.js: ^14.0.0
 rss-parser: latest
+node-fetch: ^3.0.0
 ```
 
 ---
