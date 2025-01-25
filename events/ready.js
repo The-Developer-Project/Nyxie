@@ -1,5 +1,6 @@
 const { Events } = require('discord.js');
 const { checkForUpdate } = require('../RobloDocCache.js');
+const { serve } = require('../server_handler.js');
 console.log(checkForUpdate);
 
 module.exports = {
@@ -8,6 +9,7 @@ module.exports = {
 	async execute(client) {
 		console.log(`Ready! Logged in as ${client.user.tag}`);
 		await checkForUpdate();
+		serve();
 		setInterval(client.checkUpdates, 30000);
 	},
 };

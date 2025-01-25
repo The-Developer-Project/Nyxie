@@ -29,4 +29,4 @@ async function getFollowerCount(id) {
     return json.count;
 }
 
-export { getUserFromUsername, getMugshot, getFriendCount, getFollowerCount };
+export { getUserFromUsername, getMugshot, getFriendCount, getFollowerCount};

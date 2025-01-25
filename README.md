@@ -68,6 +68,8 @@ To invite the bot to your server, we recommend using the **Discord Permissions C
 
 ### Step 3: Downloading the Code
 
+You must have node.js and openssl installed.
+
 You can either clone the repository using Git or download the project as a ZIP file.
 
 #### Option 1: Clone the Repository
@@ -106,6 +108,7 @@ npm init -y
 npm install discord.js
 npm install rss-parser
 npm install node-fetch
+npm install better-sqlite3
 ```
 
 ---
@@ -119,7 +122,7 @@ Here’s the provided template with explanations of each component:
 ```json
 {
 	"token": "ENTER_TOKEN_HERE",
-  "clientId": "ENTER_CLIENT_ID_HERE",
+    "clientId": "ENTER_CLIENT_ID_HERE",
 	"guildId": "ENTER_GUILD_ID_HERE",
 	"hiringChannel": "ENTER_HIRING_CHANNEL_ID_HERE",
 	"portfolioChannel": "ENTER_PORTFOLIOS_CHANNEL_ID_HERE",
@@ -131,7 +134,9 @@ Here’s the provided template with explanations of each component:
 	"youTubePing": "ENTER_YOUTUBE_PING_ROLE_ID_HERE",
 	"qotdPing": "ENTER_QOTD_PING_ROLE_ID_HERE",
 	"commonStaffRoleName": "ENTER_STAFF_ROLE_ID_HERE",
-	"banAppealLink": "ENTER_BAN_APPEAL_FORM_LINK_HERE"
+	"banAppealLink": "ENTER_BAN_APPEAL_FORM_LINK_HERE",
+	"verificationPlaceId": "ENTER_VERIFICATION_PLACE_ID_HERE",
+	"port": 443
 }
 ```
 
@@ -149,10 +154,42 @@ Here’s the provided template with explanations of each component:
 - **youTubePing**: The ID of your youtube notification ping role.
 - **commonStaffRoleName**: The name or ID of your staff role.
 - **banAppealLink**: The link to your ban appeal form.
+- **verificationPlaceId**: The ID of the place where verification takes place (Place id is NOT the same as experience id).
+- **port**: The port on which you will run the http server. Set to 443 by default.
 
 ---
 
-### Step 6: Running the Bot
+### Step 6: Create Database
+
+Once you've set up config.json, run this command to create the database tables:
+
+```bash
+node init.js
+```
+
+---
+
+### Step 7: Generate https certificate and key
+
+CD into /https/ or open a terminal in that directory, then run the following command and follow the instructions:
+
+```bash
+openssl req -newkey rsa:2048 -new -nodes -x509 -days 3650 -keyout key.pem -out cert.pem
+```
+
+You can then delete the get-cert file.
+
+---
+
+### Step 8: Create Roblox Experience
+
+Create the roblox experience, and place each file in the location corresponding to the file folder.
+The comment at the top of each file shows the file's class, and name. Follow the instructions on each of them.
+You can then delete the /roblox folder.
+
+---
+
+### Step 9: Running the Bot
 
 When you first set up the bot and after any updates to the slash commands, you will need to deploy the commands before running the bot.
 
@@ -190,9 +227,10 @@ If you need assistance or want to contribute to the project, feel free to contac
 ## Dependencies
 
 ```bash
-discord.js: ^14.0.0
-rss-parser: latest
-node-fetch: ^3.0.0
+better-sqlite3: ^11.8.1
+discord.js: ^14.17.3
+node-fetch: ^3.3.2
+rss-parser: ^3.13.0
 ```
 
 ---

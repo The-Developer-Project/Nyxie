@@ -21,7 +21,7 @@ module.exports = {
             .setTitle(`${option}'s Roblox Profile`)
             .addFields(
                 { name: 'Username', value: option },
-                { name: 'Display name', value: User.displayName },
+                { name: 'Display Name', value: User.displayName },
                 { name: 'User ID', value: User.id.toString()},
                 { name: 'Friend Count', value: friends.toString()},
                 { name: 'Follower Count', value: followers.toString()},
