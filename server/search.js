@@ -1,20 +1,18 @@
-const { acceptVerification } = require('../DBWrapper.js');
+const { searchProduct } = require('../DBWrapper.js');
 const { parse } = require('url');
-const fs = require('fs');
 
 module.exports = async (req, res) => {
 
-    module.exports.expectedMethod = 'PUT';
+    module.exports.expectedMethod = 'GET';
     const { query } = parse(req.url, true);
-    console.log('here1');
     try {
-      await acceptVerification(query.c, query.i);  
+      let r = searchProduct(query.s);
       res.statusCode = 200;
       res.setHeader('Content-Type', 'application/json');
-      res.end('true');  
+      res.end(JSON.stringify(r));  
     } catch (error) {
       res.statusCode = 404;
       res.setHeader('Content-Type', 'application/json');
-      res.end('false');
+      res.end('{"false":"false"}');
     }
   };

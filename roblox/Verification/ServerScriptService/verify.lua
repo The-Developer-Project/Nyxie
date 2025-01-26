@@ -2,7 +2,7 @@
 game.Players.PlayerAdded:Connect(function(player)
 	local code = player:GetJoinData().LaunchData
 	if code then
-		local baseUrl = "https://tdpapi.galacticapricot.dev/verify"
+		local baseUrl = "/verify"
 		local userId = player.UserId
 		local url = string.format("%s?c=%s&i=%s", baseUrl, code, tostring(userId))
 		local httpService = game:GetService("HttpService")

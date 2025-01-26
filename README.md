@@ -136,6 +136,8 @@ Here’s the provided template with explanations of each component:
 	"commonStaffRoleName": "ENTER_STAFF_ROLE_ID_HERE",
 	"banAppealLink": "ENTER_BAN_APPEAL_FORM_LINK_HERE",
 	"verificationPlaceId": "ENTER_VERIFICATION_PLACE_ID_HERE",
+	"ticketCategory": "ENTER_TICKET_CATEGORY_HERE",
+	"apiKey": "ENTER_API_KEY_HERE",
 	"port": 443
 }
 ```
@@ -155,6 +157,9 @@ Here’s the provided template with explanations of each component:
 - **commonStaffRoleName**: The name or ID of your staff role.
 - **banAppealLink**: The link to your ban appeal form.
 - **verificationPlaceId**: The ID of the place where verification takes place (Place id is NOT the same as experience id).
+- **port**: The port on which you will run the http server. Set to 443 by default.
+- **ticketCategory**: ID of the category for purchase tickets.
+- **apiKey**: Private key to share between bot and roblox. Can be anything.
 - **port**: The port on which you will run the http server. Set to 443 by default.
 
 ---

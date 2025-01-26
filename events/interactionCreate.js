@@ -1,13 +1,13 @@
 const { Events, MessageFlags, EmbedBuilder } = require('discord.js');
 const {dictionary} = require("../dictionary.js");
 const {hiringChannel, portfolioChannel} = require("../config.json");
+const {addProduct} = require('../DBWrapper.js');
 
 module.exports = {
 	name: Events.InteractionCreate,
 	async execute(interaction) {
 
 		if (interaction.customId === 'tk') {
-			console.log("2");
 			let id = hiringChannel;
 			let message = "Ticket";
 			let options = dictionary[interaction.member];
@@ -21,7 +21,6 @@ module.exports = {
 				id = portfolioChannel;
 				message = "Portfolio";
 			}
-			console.log(options);
 			const exampleEmbed = new EmbedBuilder()
 				.setColor(0x0099FF)
 				.setTitle(`${interaction.member.displayName}'s ${message}`)
@@ -39,6 +38,20 @@ module.exports = {
 			await interaction.reply({ content: 'Message Sent!', flags: MessageFlags.Ephemeral });
 			console.log("4");
 
+		}
+		if (interaction.customId === 'np') {
+			addProduct(interaction.member.id,
+				{
+					name: interaction.fields.getTextInputValue('ti'),
+					description: interaction.fields.getTextInputValue('de'),
+					type: interaction.fields.getTextInputValue('ty'),
+					tags: interaction.fields.getTextInputValue('tg'),
+					robloxassetid: interaction.fields.getTextInputValue('im'),
+					rating: 0
+
+				}
+			)
+			await interaction.reply({ content: 'Listing Posted!', flags: MessageFlags.Ephemeral });
 		}
 
 

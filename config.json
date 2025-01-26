@@ -14,5 +14,7 @@
 	"commonStaffRoleName": "ENTER_STAFF_ROLE_ID_HERE",
 	"banAppealLink": "ENTER_BAN_APPEAL_FORM_LINK_HERE",
 	"verificationPlaceId": "ENTER_VERIFICATION_PLACE_ID_HERE",
+	"ticketCategory": "ENTER_TICKET_CATEGORY_HERE",
+	"apiKey": "ENTER_API_KEY_HERE",
 	"port": 443
 }
