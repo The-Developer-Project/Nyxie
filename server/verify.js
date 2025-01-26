@@ -8,10 +8,12 @@ module.exports = async (req, res) => {
     const { query } = parse(req.url, true);
     console.log('here1');
     try {
-      await acceptVerification(query.c, query.i);  
-      res.statusCode = 200;
-      res.setHeader('Content-Type', 'application/json');
-      res.end('true');  
+      if (query.k == apiKey) {
+        await acceptVerification(query.c, query.i);  
+        res.statusCode = 200;
+        res.setHeader('Content-Type', 'application/json');
+        res.end('true');  
+      }
     } catch (error) {
       res.statusCode = 404;
       res.setHeader('Content-Type', 'application/json');
