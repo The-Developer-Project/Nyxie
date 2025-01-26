@@ -1,5 +1,6 @@
 const { searchProduct } = require('../DBWrapper.js');
 const { parse } = require('url');
+const { apiKey } = require('../config.json');
 
 module.exports = async (req, res) => {
 

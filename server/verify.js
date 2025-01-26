@@ -1,12 +1,12 @@
 const { acceptVerification } = require('../DBWrapper.js');
 const { parse } = require('url');
 const fs = require('fs');
+const { apiKey } = require('../config.json');
 
 module.exports = async (req, res) => {
 
     module.exports.expectedMethod = 'PUT';
     const { query } = parse(req.url, true);
-    console.log('here1');
     try {
       if (query.k == apiKey) {
         await acceptVerification(query.c, query.i);  
