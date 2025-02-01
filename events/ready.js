@@ -11,6 +11,9 @@ module.exports = {
 		await checkForUpdate();
 		serve();
 		setInterval(client.checkUpdates, 30000);
-		setInterval(client.digestTickets, 30000);
+		setInterval(async () => {
+			await client.digestTickets();
+			await client.checkGiveaways();
+		  }, 10000); 
 	},
 };

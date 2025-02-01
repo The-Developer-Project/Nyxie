@@ -15,7 +15,7 @@ module.exports = (client) => {
             if (!guild) return;
 
             let channel = await guild.channels.create({
-                name: `ticket-${rid}`,
+                name: `・ticket-${rid}`,
                 type: ChannelType.GuildText, // Specify the channel type as text
                 parent: ticketCategory, // Assign to the ticket category
                 permissionOverwrites: [
